@@ -6,43 +6,201 @@
   <title>Politique de confidentialité — Readout</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f9fafb;
+      --card: #ffffff;
+      --text: #111827;
+      --muted: #6b7280;
+      --muted-soft: #9ca3af;
+      --border: #e5e7eb;
+      --border-strong: #d1d5db;
+      --surface: #f3f4f6;
+      --accent: #111827;
+      --shadow: 0 18px 45px rgba(17, 24, 39, 0.06);
+      --radius-xl: 24px;
+      --radius-lg: 18px;
+      --radius-md: 14px;
+    }
+
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: #f9fafb;
-      color: #111827;
+      background: var(--bg);
+      color: var(--text);
       line-height: 1.7;
       padding: 40px 20px 80px;
     }
-    .container { max-width: 720px; margin: 0 auto; }
-    .back { display: inline-block; margin-bottom: 32px; color: #6b7280; text-decoration: none; font-size: 14px; }
-    .back:hover { color: #111827; }
-    h1 { font-size: 32px; font-weight: 900; letter-spacing: -0.5px; margin-bottom: 8px; }
-    .meta { color: #6b7280; font-size: 14px; margin-bottom: 48px; }
-    h2 { font-size: 18px; font-weight: 800; margin: 40px 0 12px; color: #111827; }
-    p { color: #374151; margin-bottom: 14px; font-size: 15px; }
-    table { width: 100%; border-collapse: collapse; margin: 16px 0 24px; font-size: 14px; }
-    th { background: #f3f4f6; text-align: left; padding: 10px 12px; font-weight: 800; border: 1px solid #e5e7eb; }
-    td { padding: 10px 12px; border: 1px solid #e5e7eb; color: #374151; vertical-align: top; }
-    a { color: #111827; font-weight: 700; }
-    hr { border: none; border-top: 1px solid #e5e7eb; margin: 40px 0; }
-    .badge {
-      display: inline-block;
-      background: #111827;
-      color: #fff;
-      font-size: 13px;
-      font-weight: 800;
-      padding: 4px 12px;
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 24px;
+      margin-bottom: 36px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 40px;
+      padding: 0 14px;
+      border: 1px solid var(--border);
       border-radius: 999px;
-      margin-bottom: 24px;
+      background: #fff;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      transition: all 0.18s ease;
+    }
+
+    .back:hover {
+      color: var(--text);
+      border-color: var(--border-strong);
+      background: var(--surface);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 32px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      font-size: 32px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+      margin-bottom: 10px;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 800;
+      margin: 40px 0 12px;
+      color: var(--text);
+    }
+
+    p {
+      color: #374151;
+      margin-bottom: 14px;
+      font-size: 15px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0 24px;
+      font-size: 14px;
+      background: #fff;
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    th {
+      background: var(--surface);
+      text-align: left;
+      padding: 10px 12px;
+      font-weight: 800;
+      border: 1px solid var(--border);
+    }
+
+    td {
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      color: #374151;
+      vertical-align: top;
+    }
+
+    a {
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+
+    .footer-note {
+      font-size: 13px;
+      color: var(--muted-soft);
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 24px 16px 64px;
+      }
+
+      .hero {
+        padding: 20px;
+        border-radius: 20px;
+      }
+
+      .hero h1 {
+        font-size: 28px;
+      }
+
+      .hero-top {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .back,
+      .badge {
+        width: fit-content;
+      }
+
+      table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <a class="back" href="/">← Readout</a>
-    <span class="badge">Légal</span>
-    <h1>Politique de confidentialité</h1>
-    <p class="meta">Dernière mise à jour : mars 2026</p>
+    <header class="hero">
+      <div class="hero-top">
+        <a class="back" href="/">← Retour à Readout</a>
+        <span class="badge">Légal</span>
+      </div>
+      <h1>Politique de confidentialité</h1>
+      <p class="meta">Dernière mise à jour : mars 2026</p>
+    </header>
 
     <h2>1. Qui sommes-nous ?</h2>
     <p>Readout est une application mobile gratuite de suivi de lecture, développée et exploitée à titre personnel par son développeur indépendant.</p>
@@ -104,7 +262,7 @@
     <p>Nous pouvons modifier cette politique à tout moment. En cas de modification substantielle, vous serez informé via l'application.</p>
 
     <hr>
-    <p style="font-size:13px;color:#9ca3af;">© 2026 Readout — <a href="/terms">Conditions d'utilisation</a></p>
+    <p class="footer-note">© 2026 Readout — <a href="/terms">Conditions d'utilisation</a></p>
   </div>
 </body>
 </html>

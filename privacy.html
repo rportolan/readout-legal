@@ -131,10 +131,21 @@
       color: var(--text);
     }
 
-    p {
+    p, li {
       color: #374151;
-      margin-bottom: 14px;
       font-size: 15px;
+    }
+
+    p {
+      margin-bottom: 14px;
+    }
+
+    ul {
+      margin: 8px 0 16px 20px;
+    }
+
+    li + li {
+      margin-top: 8px;
     }
 
     table {
@@ -231,7 +242,7 @@
         <span class="badge">Légal</span>
       </div>
       <h1>Politique de confidentialité</h1>
-      <p class="meta">Dernière mise à jour : mars 2026</p>
+      <p class="meta">Dernière mise à jour : avril 2026</p>
     </header>
 
     <h2>1. Qui sommes-nous ?</h2>
@@ -242,56 +253,107 @@
     <p>L'utilisation de Readout est réservée aux personnes âgées de 13 ans ou plus. Nous ne collectons pas sciemment de données personnelles concernant des enfants de moins de 13 ans. Si vous êtes parent ou tuteur et pensez que votre enfant nous a transmis des données, contactez-nous.</p>
 
     <h2>3. Données collectées</h2>
-    <p><strong>Données que vous nous fournissez directement :</strong> adresse e-mail, nom d'utilisateur, prénom, nom de famille, biographie (optionnelle), livres ajoutés, statuts de lecture, pages lues, notes, citations, vocabulaire, résumés, analyses, chapitres, préférences.</p>
-    <p><strong>Données générées automatiquement :</strong> progression de lecture, journaux de lecture, points d'expérience (XP), badges débloqués, résultats de quiz.</p>
+    <p><strong>Données que vous nous fournissez directement :</strong> adresse e-mail, nom d'utilisateur, prénom, nom de famille, biographie (optionnelle), livres ajoutés, statuts de lecture, pages lues, notes, citations, vocabulaire, résumés, analyses, chapitres et préférences.</p>
+    <p><strong>Données générées automatiquement :</strong> progression de lecture, journaux de lecture, points d'expérience (XP), badges débloqués et résultats de quiz.</p>
 
-    <h2>4. Pourquoi collectons-nous ces données ?</h2>
+    <h2>4. Utilisation de la caméra</h2>
+    <p>Readout peut demander l'accès à la caméra de votre appareil uniquement lorsque vous utilisez la fonctionnalité de scan de code-barres ISBN pour ajouter un livre plus rapidement.</p>
+    <ul>
+      <li>La caméra est utilisée uniquement pour lire un code-barres ISBN.</li>
+      <li>La caméra n'est pas utilisée en arrière-plan.</li>
+      <li>Les images ou flux vidéo captés lors du scan ne sont pas stockés sur nos serveurs.</li>
+      <li>L'accès à la caméra est facultatif : si vous ne souhaitez pas l'autoriser, vous pouvez toujours ajouter un livre manuellement.</li>
+    </ul>
+
+    <h2>5. Pourquoi collectons-nous ces données ?</h2>
     <table>
       <thead>
-        <tr><th>Finalité</th><th>Base légale (RGPD)</th></tr>
+        <tr>
+          <th>Finalité</th>
+          <th>Base légale (RGPD)</th>
+        </tr>
       </thead>
       <tbody>
-        <tr><td>Créer et gérer votre compte</td><td>Exécution du contrat</td></tr>
-        <tr><td>Vous permettre de suivre votre lecture</td><td>Exécution du contrat</td></tr>
-        <tr><td>Envoyer les e-mails transactionnels</td><td>Exécution du contrat</td></tr>
-        <tr><td>Calculer vos statistiques, XP et récompenses</td><td>Exécution du contrat</td></tr>
-        <tr><td>Améliorer l'application</td><td>Intérêt légitime</td></tr>
+        <tr>
+          <td>Créer et gérer votre compte</td>
+          <td>Exécution du contrat</td>
+        </tr>
+        <tr>
+          <td>Vous permettre de suivre votre lecture</td>
+          <td>Exécution du contrat</td>
+        </tr>
+        <tr>
+          <td>Envoyer les e-mails transactionnels</td>
+          <td>Exécution du contrat</td>
+        </tr>
+        <tr>
+          <td>Calculer vos statistiques, XP et récompenses</td>
+          <td>Exécution du contrat</td>
+        </tr>
+        <tr>
+          <td>Permettre le scan ISBN via la caméra</td>
+          <td>Exécution du contrat</td>
+        </tr>
+        <tr>
+          <td>Améliorer l'application</td>
+          <td>Intérêt légitime</td>
+        </tr>
       </tbody>
     </table>
     <p>Nous ne collectons <strong>aucune donnée à des fins publicitaires</strong>. Nous ne vendons pas vos données.</p>
 
-    <h2>5. Durée de conservation</h2>
+    <h2>6. Durée de conservation</h2>
     <p>Vos données sont conservées tant que votre compte est actif. Si vous supprimez votre compte, l'intégralité de vos données personnelles est supprimée dans un délai de 30 jours. Les logs techniques anonymisés peuvent être conservés jusqu'à 90 jours.</p>
 
-    <h2>6. Sous-traitants</h2>
+    <h2>7. Sous-traitants</h2>
     <table>
       <thead>
-        <tr><th>Sous-traitant</th><th>Rôle</th><th>Localisation</th></tr>
+        <tr>
+          <th>Sous-traitant</th>
+          <th>Rôle</th>
+          <th>Localisation</th>
+        </tr>
       </thead>
       <tbody>
-        <tr><td><strong>Railway</strong></td><td>Hébergement serveur et base de données</td><td>États-Unis</td></tr>
-        <tr><td><strong>Resend</strong></td><td>Envoi des e-mails transactionnels</td><td>États-Unis</td></tr>
-        <tr><td><strong>Google Books API</strong></td><td>Recherche et informations livres</td><td>États-Unis</td></tr>
-        <tr><td><strong>Wiktionary API</strong></td><td>Définitions du dictionnaire</td><td>Wikimedia Foundation</td></tr>
+        <tr>
+          <td><strong>Railway</strong></td>
+          <td>Hébergement serveur et base de données</td>
+          <td>États-Unis</td>
+        </tr>
+        <tr>
+          <td><strong>Resend</strong></td>
+          <td>Envoi des e-mails transactionnels</td>
+          <td>États-Unis</td>
+        </tr>
+        <tr>
+          <td><strong>Google Books API</strong></td>
+          <td>Recherche et informations livres</td>
+          <td>États-Unis</td>
+        </tr>
+        <tr>
+          <td><strong>Wiktionary API</strong></td>
+          <td>Définitions du dictionnaire</td>
+          <td>Wikimedia Foundation</td>
+        </tr>
       </tbody>
     </table>
 
-    <h2>7. Transferts internationaux</h2>
-    <p>Certains sous-traitants sont situés aux États-Unis. Ces transferts sont effectués dans le cadre de garanties appropriées (clauses contractuelles types de l'Union européenne ou équivalent).</p>
+    <h2>8. Transferts internationaux</h2>
+    <p>Certains sous-traitants sont situés hors de l'Union européenne, notamment aux États-Unis. Ces transferts sont effectués dans le cadre de garanties appropriées lorsque cela est nécessaire.</p>
 
-    <h2>8. Vos droits (RGPD)</h2>
+    <h2>9. Vos droits (RGPD)</h2>
     <p>Si vous résidez dans l'Union européenne, vous disposez des droits d'accès, de rectification, d'effacement, de portabilité et d'opposition sur vos données personnelles.</p>
-    <p>Vous pouvez supprimer votre compte directement depuis l'application (Paramètres → Supprimer mon compte), ce qui entraîne la suppression complète de toutes vos données. Vous pouvez également nous contacter à <a href="mailto:romeoprtl.dev@gmail.com">romeoprtl.dev@gmail.com</a>.</p>
-    <p>En cas de litige, vous pouvez introduire une réclamation auprès de la <a href="https://www.cnil.fr" target="_blank">CNIL</a>.</p>
+    <p>Vous pouvez supprimer votre compte directement depuis l'application (Paramètres → Supprimer mon compte), ce qui entraîne la suppression complète de vos données. Vous pouvez également nous contacter à <a href="mailto:romeoprtl.dev@gmail.com">romeoprtl.dev@gmail.com</a>.</p>
+    <p>En cas de litige, vous pouvez introduire une réclamation auprès de la <a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer">CNIL</a>.</p>
 
-    <h2>9. Sécurité</h2>
-    <p>Les mots de passe sont stockés sous forme hashée. Les tokens sont hashés et expirables. Les communications sont chiffrées (HTTPS/TLS).</p>
+    <h2>10. Sécurité</h2>
+    <p>Les mots de passe sont stockés sous forme hashée. Les tokens sont hashés et expirables. Les communications sont chiffrées via HTTPS/TLS.</p>
 
-    <h2>10. Cookies</h2>
-    <p>Readout est une application mobile. Nous n'utilisons pas de cookies. Des tokens d'authentification sont stockés localement sur votre appareil et peuvent être révoqués en vous déconnectant.</p>
+    <h2>11. Cookies</h2>
+    <p>Readout est une application mobile. Nous n'utilisons pas de cookies. Des tokens d'authentification peuvent être stockés localement sur votre appareil pour maintenir votre session et peuvent être révoqués en vous déconnectant.</p>
 
-    <h2>11. Modifications</h2>
-    <p>Nous pouvons modifier cette politique à tout moment. En cas de modification substantielle, vous serez informé via l'application.</p>
+    <h2>12. Modifications</h2>
+    <p>Nous pouvons modifier cette politique à tout moment. En cas de modification substantielle, vous serez informé via l'application ou par tout autre moyen approprié.</p>
 
     <hr>
     <p class="footer-note">© 2026 Readout — <a href="/terms">Conditions d'utilisation</a></p>
